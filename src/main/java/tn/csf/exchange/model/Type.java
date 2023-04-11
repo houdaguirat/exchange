@@ -24,8 +24,8 @@ public class Type {
 	@Column  
 	private double annee;
 	@ManyToOne(optional=false)
-	@JoinColumn(name="idPiece", referencedColumnName="id")
-	private Piece piece;
+	@JoinColumn(name="idMarque", referencedColumnName="id")
+	private Marque marque;
 	public int getId() {
 		return id;
 	}
@@ -44,12 +44,18 @@ public class Type {
 	public void setAnnee(double annee) {
 		this.annee = annee;
 	}
-	public Piece getPiece() {
-		return piece;
+	public Marque getMarque() {
+		return marque;
 	}
-	public void setPiece(Piece piece) {
-		this.piece = piece;
-	}   
+	public void setMarque(Marque marque) {
+		this.marque = marque;
+	}
+	@Override
+	public String toString() {
+		return "Type [id=" + id + ", name=" + name + ", annee=" + annee + ", marque=" + marque + "]";
+	}
+	
+	
 	
 
 }
