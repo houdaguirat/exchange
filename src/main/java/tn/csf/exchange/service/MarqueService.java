@@ -1,14 +1,16 @@
 package tn.csf.exchange.service;
 
 import java.util.ArrayList;  
-import java.util.List;  
-import org.springmRamework.beans.factory.annotation.Autowired;  
-import org.springmRamework.stereotype.Service;
+import java.util.List;
 
-import com.example.souk.model.Marque;
-import com.example.souk.repository.MarqueRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-//defining the business logic  
+import tn.csf.exchange.model.Marque;
+import tn.csf.exchange.repository.MarqueRepository;  
+
+
+
 @Service 
 
 public class MarqueService {
@@ -20,7 +22,7 @@ public class MarqueService {
 	public List<Marque> getAllMarques()   
 	{  
 		List<Marque> Marques = new ArrayList<Marque>();  
-		mR.findAll().forEach(f -> Marques.add(f));  
+		mR.findAll().forEach(m -> Marques.add(m));  
 		return Marques;  	
 	}  
 

@@ -1,12 +1,13 @@
 package tn.csf.exchange.service;
 
 import java.util.ArrayList;  
-import java.util.List;  
-import org.springpRamework.beans.factory.annotation.Autowired;  
-import org.springpRamework.stereotype.Service;
+import java.util.List;
 
-import com.example.rechange.model.Piece;
-import com.example.rechange.repository.PieceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tn.csf.exchange.model.Piece;
+import tn.csf.exchange.repository.PieceRepository;  
 
 //defining the business logic  
 @Service 
@@ -20,7 +21,7 @@ public class PieceService {
 	public List<Piece> getAllPieces()   
 	{  
 		List<Piece> Pieces = new ArrayList<Piece>();  
-		pR.findAll().forEach(f -> Pieces.add(f));  
+		pR.findAll().forEach(p -> Pieces.add(p));  
 		return Pieces;  	
 	}  
 
